@@ -1,9 +1,8 @@
 'use client';
 
-import { group } from "console";
-import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from "./ui/command";
+
+import { Command,CommandGroup,CommandItem, CommandList } from "./ui/command";
 import Useritem from "./Useritem";
-import { text } from "stream/consumers";
 import { User,Inbox,Receipt,Bell,Settings,Cookie,MessageSquare } from "lucide-react";
 
 export default function Sidebar() {
@@ -59,8 +58,10 @@ const menuList=[
 ]
 
     return (
-      <div className=" flex flex-col gap-2 w-[300px] min-w-[300px] border-r min-h-screen p-4">
-        <div><Useritem /></div>
+      <div className="fixed flex flex-col gap-2 w-[300px] min-w-[300px] border-r min-h-screen p-4">
+        <div>
+          <Useritem />
+        </div>
         <div className="grow">
                   <Command style={{overflow:'visible'}}>
             
